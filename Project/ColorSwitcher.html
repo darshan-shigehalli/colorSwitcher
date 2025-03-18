@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Switcher</title>
+    <style>
+        #aqua,
+        #black,
+        #green,
+        #orange,
+        #yellow {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 2pt white solid;
+        }
+
+        #aqua {
+            color: white;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #black {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #orange {
+            color: white;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #yellow {
+            /* color: white; */
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #green {
+            color: white;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxes {
+            display: flex;
+            padding: 20px;
+            /* right: 20px; */
+        }
+
+        h1,
+        p {
+            margin-left: 27px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color switcher</h1>
+    <p>Click the colored boxes to change the background color of whole screen to the same color.</p>
+
+    <div class="boxes">
+        <div id="aqua">Aqua</div>
+        <div id="black">Black</div>
+        <div id="green">Green</div>
+        <div id="orange">Orange</div>
+        <div id="yellow">Yellow</div>
+    </div>
+</body>
+<script>
+    // document.querySelector('#aqua').addEventListener('click', () => {
+    //     document.querySelector('body').style.backgroundColor = 'aqua';
+    // });
+
+    // document.querySelector('#green').addEventListener('click', () => {
+    //     document.querySelector('body').style.backgroundColor = 'green';
+    // });
+
+    // document.querySelector('#yellow').addEventListener('click', () => {
+    //     document.querySelector('body').style.backgroundColor = 'yellow';
+    // });
+
+    // document.querySelector('#black').addEventListener('click', () => {
+    //     document.querySelector('body').style.backgroundColor = 'black';
+    //     document.querySelector('h1').style.color = 'white';
+    //     document.querySelector('p').style.color = 'white';
+    // });
+
+    // document.querySelector('#orange').addEventListener('click', () => {
+    //     document.querySelector('body').style.backgroundColor = 'orange';
+    // });
+
+
+
+    function changeColor(color) {
+        document.querySelector('body').style.backgroundColor = color;
+        if (color == 'black') {
+            document.querySelector('h1').style.color = 'white';
+            document.querySelector('p').style.color = 'white';
+        }
+    }
+
+    document.querySelector('#aqua').addEventListener('click', () => changeColor('aqua'));
+    document.querySelector('#yellow').addEventListener('click', () => changeColor('yellow'));
+    document.querySelector('#black').addEventListener('click', () => changeColor('black'));
+    document.querySelector('#orange').addEventListener('click', () => changeColor('orange'));
+    document.querySelector('#green').addEventListener('click', () => changeColor('green'));
+</script>
+
+</html>
